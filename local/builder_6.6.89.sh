@@ -15,7 +15,7 @@ read -p "是否启用susfs？(y/n，默认：y): " APPLY_SUSFS
 APPLY_SUSFS=${APPLY_SUSFS:-y}
 read -p "是否启用 KPM？(y-启用 KpatchNext独立kpm实现, n-关闭kpm，默认：n): " USE_PATCH_LINUX
 USE_PATCH_LINUX=${USE_PATCH_LINUX:-n}
-read -p "KSU分支版本(r=ReSukiSU, y=SukiSU Ultra, n=KernelSU Next, k=KSU, l=lkm模式(无内置KSU), 默认：r): " KSU_BRANCH
+read -p "KSU分支版本(r=ReSukiSU, y=SukiSU Ultra, n=KernelSU Next, k=KSU, l=lkm模式(无内置KSU), 默认：y): " KSU_BRANCH
 KSU_BRANCH=${KSU_BRANCH:-r}
 read -p "是否应用 lz4 1.10.0 & zstd 1.5.7 补丁？(y/n，默认：y): " APPLY_LZ4
 APPLY_LZ4=${APPLY_LZ4:-y}
@@ -48,8 +48,8 @@ fi
 
 echo
 echo "===== 配置信息 ====="
-echo "适用机型: $MANIFEST"
-echo "自定义内核后缀: -$CUSTOM_SUFFIX"
+echo "适用机型: $rmx6699_defconfig"
+echo "自定义内核后缀: -$realmeGT8-6.6-SukiSU Ultra40796"
 echo "KSU分支版本: $KSU_TYPE"
 echo "启用susfs: $APPLY_SUSFS"
 echo "启用 KPM: $USE_PATCH_LINUX"
